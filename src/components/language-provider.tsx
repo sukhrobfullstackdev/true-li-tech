@@ -512,7 +512,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [currentLanguage, setCurrentLanguage] = useState("ru")
 
     useEffect(() => {
-        let savedLanguage = localStorage.getItem("language") || navigator.language.split("-")[0]
+
+        let savedLanguage = localStorage.getItem("language") || "ru"
 
         if (!savedLanguage || !languages.some((lang) => lang.code === savedLanguage)) {
             savedLanguage = "ru"
