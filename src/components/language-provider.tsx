@@ -511,13 +511,16 @@ const LanguageContext = createContext<LanguageContextType>({
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [currentLanguage, setCurrentLanguage] = useState("ru")
 
-  useEffect(() => {
-    // Get browser language or saved preference
-    const savedLanguage = localStorage.getItem("language") || navigator.language.split("-")[0]
-    if (languages.some((lang) => lang.code === savedLanguage)) {
-      setCurrentLanguage(savedLanguage)
-    }
-  }, [])
+    useEffect(() => {
+        let savedLanguage = localStorage.getItem("language") || navigator.language.split("-")[0]
+
+        if (!savedLanguage || !languages.some((lang) => lang.code === savedLanguage)) {
+            savedLanguage = "ru"
+        }
+
+        setCurrentLanguage(savedLanguage)
+        localStorage.setItem("language", savedLanguage)
+    }, [])
 
   const setLanguage = (code: string) => {
     setCurrentLanguage(code)
