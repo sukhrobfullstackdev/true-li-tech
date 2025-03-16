@@ -170,13 +170,6 @@ export default function ServicesPage() {
                 </Link>
               </Button>
             </div>
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src="/assets/services_page/banner.jpg?height=600&width=800&text=Services"
-                alt="Our Services"
-                className="w-full h-auto"
-              />
-            </div>
           </div>
         </div>
       </section>

@@ -19,7 +19,7 @@ import Link from "next/link"
 import { useLanguage } from "./language-provider"
 
 export default function ServicesSection() {
-  const [hoveredId, setHoveredId] = useState<number | null>(null)
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
   const { t } = useLanguage();
   const services = [
     {
@@ -27,63 +27,63 @@ export default function ServicesSection() {
       title: t("services.e_commerce_title"),
       description: t("services.e_commerce_description"),
       icon: <ShoppingCart className="h-10 w-10" />,
-      href: "/services/ecommerce",
+      href: "/services",
     },
     {
       id: 2,
       title: t("services.healthcare_title"),
       description: t("services.healthcare_description"),
       icon: <Heart className="h-10 w-10" />,
-      href: "/services/healthcare",
+      href: "/services",
     },
     {
       id: 3,
       title: t("services.finance_and_fintech_title"),
       description: t("services.finance_and_fintech_description"),
       icon: <BarChart3 className="h-10 w-10" />,
-      href: "/services/fintech",
+      href: "/services",
     },
     {
       id: 4,
       title: t("services.education_title"),
       description: t("services.education_description"),
       icon: <GraduationCap className="h-10 w-10" />,
-      href: "/services/education",
+      href: "/services",
     },
     {
       id: 5,
       title: t("services.real_estate_title"),
       description: t("services.real_estate_description"),
       icon: <Home className="h-10 w-10" />,
-      href: "/services/real-estate",
+      href: "/services",
     },
     {
       id: 6,
       title: t("services.tourism_title"),
       description:t("services.tourism_description"),
       icon: <Plane className="h-10 w-10" />,
-      href: "/services/hospitality",
+      href: "/services",
     },
     {
       id: 7,
       title: t("services.tourism_title"),
       description: t("services.tourism_description"),
       icon: <MonitorSmartphone className="h-10 w-10" />,
-      href: "/services/saas",
+      href: "/services",
     },
     {
       id: 8,
       title: t("services.food_beverage_title"),
       description: t("services.food_beverage_description"),
       icon: <Utensils className="h-10 w-10" />,
-      href: "/services/food-beverage",
+      href: "/services",
     },
     {
       id: 9,
       title: t("services.fitness_title"),
       description: t("services.fitness_description"),
       icon: <Dumbbell className="h-10 w-10" />,
-      href: "/services/fitness",
+      href: "/services",
     },
   ]
   return (
